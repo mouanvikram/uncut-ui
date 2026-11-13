@@ -16,7 +16,7 @@ type EmbossedButtonAsLink = EmbossedButtonBaseProps &
 export type EmbossedButtonProps = EmbossedButtonAsButton | EmbossedButtonAsLink;
 
 const baseClasses =
-  "inline-flex min-h-9.5 cursor-pointer items-center justify-center gap-1.5 rounded-lg px-3.75 py-2.5 text-sm font-[650] whitespace-nowrap transition-[background,box-shadow,transform] duration-150 active:scale-[.96] disabled:cursor-not-allowed disabled:opacity-48";
+  "inline-flex min-h-9.5 cursor-pointer items-center justify-center gap-1.5 rounded-lg px-3.75 py-2.5 text-sm font-[650] whitespace-nowrap transition-[background,box-shadow,scale,transform] duration-150 ease-out motion-safe:active:scale-95 motion-reduce:transition-none disabled:active:scale-100 disabled:cursor-not-allowed disabled:opacity-48";
 
 const toneClasses = {
   blue: "bg-[linear-gradient(180deg,#3b82f6_0%,#1d4ed8_100%)] text-white shadow-[inset_0_2px_0_rgba(147,197,253,0.55),inset_0_-2px_0_rgba(35,68,200)] hover:bg-[linear-gradient(180deg,#4b8df8_0%,#2563eb_100%)] hover:shadow-[inset_0_2px_0_rgba(147,197,253,0.3),inset_0_-2px_0_rgba(35,68,200,0.6)] dark:bg-[linear-gradient(180deg,#3b82f6_0%,#1e40af_100%)] dark:text-[#f5f5f5] dark:shadow-[inset_0_2px_0_rgba(147,197,253,0.45),inset_0_-2px_0_rgba(35,68,200,0.95)] dark:hover:bg-[linear-gradient(180deg,#4b8df8_0%,#1d4ed8_100%)] dark:hover:shadow-[inset_0_2px_0_rgba(191,219,254,0.55),inset_0_-2px_0_rgba(35,68,200,1)]",
