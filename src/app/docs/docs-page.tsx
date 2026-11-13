@@ -93,7 +93,7 @@ function ComponentGroupIcon({ group }: { group: (typeof componentGroups)[number]
 function SidebarGroup({ title, icon, children }: { title: string; icon: ReactNode; children: ReactNode }) {
   return (
     <details open className="group">
-      <summary className="flex cursor-pointer list-none items-center gap-2 rounded-[var(--radius-md)] px-3 py-2 font-medium hover:bg-[#eeeeee] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current dark:hover:bg-[var(--surface-contrast)] [&::-webkit-details-marker]:hidden">
+      <summary className="flex cursor-pointer list-none items-center gap-2 rounded-[var(--radius-md)] px-3 py-2 font-medium hover:bg-[#f1f1f1] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current dark:hover:bg-[var(--surface-contrast)] [&::-webkit-details-marker]:hidden">
         {icon}
         {title}
         <svg aria-hidden="true" viewBox="0 0 16 16" className="ms-auto size-3 shrink-0 group-open:rotate-180" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -109,7 +109,7 @@ function SidebarGroup({ title, icon, children }: { title: string; icon: ReactNod
 
 function ComponentsNavigation({ doc }: { doc: Doc }) {
   return (
-      <nav aria-label="Components" className="space-y-3 text-sm [&_a]:rounded-[var(--radius-md)] [&_a]:px-3 [&_a]:py-2 [&_a:is(:hover,[aria-current=page])]:bg-[#eeeeee] dark:[&_a:is(:hover,[aria-current=page])]:bg-[var(--surface-contrast)]">
+      <nav aria-label="Components" className="space-y-3 text-sm [&_a]:rounded-[var(--radius-md)] [&_a]:px-3 [&_a]:py-2 [&_a:is(:hover,[aria-current=page])]:bg-[#f1f1f1] dark:[&_a:is(:hover,[aria-current=page])]:bg-[var(--surface-contrast)]">
         <div className="group/profile relative">
           <a href="https://x.com/mouanvikram" className="flex items-center gap-2 font-medium">
             <HugeiconsIcon icon={NewTwitterIcon} size={16} aria-hidden="true" />
@@ -159,7 +159,7 @@ export function DocsPage({ doc }: { doc: Doc }) {
         : "mx-auto max-w-5xl px-[var(--layout-gutter)] py-8 md:py-12"}>
       {isComponents && (
         <>
-          <aside className="components-sidebar sticky top-[55px] hidden h-[calc(100dvh-55px)] self-start overflow-y-auto bg-[#f4f4f4] p-3 md:block dark:bg-[var(--surface)]">
+          <aside className="components-sidebar sticky top-[55px] hidden h-[calc(100dvh-55px)] self-start overflow-y-auto bg-[#fafafa] py-3 ps-[calc(var(--layout-gutter)-0.75rem)] pe-3 md:block dark:bg-[var(--surface)]">
             <ComponentsNavigation doc={doc} />
           </aside>
           <MobileComponentsSidebar>

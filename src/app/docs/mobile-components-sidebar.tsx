@@ -2,7 +2,7 @@
 
 import { useEffect, useId, useRef, type ReactNode } from "react";
 
-const toggleStyle = "grid size-11 cursor-pointer place-items-center rounded-[var(--radius-md)] hover:bg-[#e2e2e2] dark:hover:bg-[var(--surface-contrast)]";
+const toggleStyle = "grid size-11 cursor-pointer place-items-center rounded-[var(--radius-md)] hover:bg-[#f1f1f1] dark:hover:bg-[var(--surface-contrast)]";
 
 function SidebarIcon({ open }: { open: boolean }) {
   return (
@@ -34,7 +34,7 @@ export function MobileComponentsSidebar({ children }: { children: ReactNode }) {
         aria-label="Open components sidebar"
         aria-haspopup="dialog"
         aria-controls={panelId}
-        className={`${toggleStyle} fixed bottom-[max(1rem,env(safe-area-inset-bottom))] left-4 z-30 border border-[var(--border)] bg-[#f4f4f4] shadow-sm md:hidden dark:bg-[var(--surface)]`}
+        className={`${toggleStyle} fixed bottom-[max(1rem,env(safe-area-inset-bottom))] start-[var(--layout-gutter)] z-30 border border-[var(--border)] bg-[#fafafa] shadow-sm md:hidden dark:bg-[var(--surface)]`}
         onClick={() => panelRef.current?.showModal()}
       >
         <SidebarIcon open={false} />
@@ -43,7 +43,7 @@ export function MobileComponentsSidebar({ children }: { children: ReactNode }) {
         id={panelId}
         ref={panelRef}
         aria-label="Components navigation"
-        className="fixed inset-y-0 right-auto left-0 m-0 h-dvh max-h-none w-64 max-w-full bg-[#f4f4f4] text-[var(--foreground)] backdrop:bg-black/40 md:hidden dark:bg-[var(--surface)]"
+        className="fixed inset-y-0 right-auto left-0 m-0 h-dvh max-h-none w-64 max-w-full bg-[#fafafa] text-[var(--foreground)] backdrop:bg-black/40 md:hidden dark:bg-[var(--surface)]"
         onClick={(event) => {
           if (event.target === event.currentTarget || (event.target instanceof Element && event.target.closest("a[href]"))) {
             event.currentTarget.close();
@@ -51,10 +51,10 @@ export function MobileComponentsSidebar({ children }: { children: ReactNode }) {
         }}
       >
         <div className="flex h-full flex-col">
-          <div className="components-sidebar min-h-0 flex-1 overflow-y-auto overscroll-contain p-3">
+          <div className="components-sidebar min-h-0 flex-1 overflow-y-auto overscroll-contain py-3 ps-[calc(var(--layout-gutter)-0.75rem)] pe-3">
             {children}
           </div>
-          <form method="dialog" className="ps-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
+          <form method="dialog" className="ps-[var(--layout-gutter)] pb-[max(1rem,env(safe-area-inset-bottom))]">
             <button type="submit" aria-label="Close components sidebar" className={toggleStyle}>
               <SidebarIcon open />
             </button>
