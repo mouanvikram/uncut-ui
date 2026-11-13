@@ -67,7 +67,7 @@ export function SiteHeader() {
         </div>
         <ThemeSwitch />
         <a
-          href="https://github.com/uncut-ui/uncut-ui"
+          href="https://github.com/mouanvikram/uncut-ui"
           aria-label="Uncut UI on GitHub"
           className="inline-flex h-9.5 shrink-0 items-center justify-center gap-2 rounded-[var(--radius-md)] px-2.5 text-sm font-medium hover:bg-[#f4f4f4] max-[680px]:w-9.5 max-[680px]:px-0 dark:hover:bg-[#1e1e1e]"
         >
