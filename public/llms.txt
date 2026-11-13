@@ -1,0 +1,17 @@
+# Uncut-Ui
+
+> An AI-first design system for professional React interfaces. Uncut-Ui documents visual foundations, typed components, interaction rules, patterns, and templates so both developers and AI agents can follow the same design language.
+
+## Start here
+- [Introduction](/docs): design foundations and library overview.
+- [React components](/docs/components): current component catalog.
+- [Button](/docs/components/button): variants, sizes, usage, and interactive example.
+- [Instructions for AI agents](/docs/ai): implementation and design contract.
+- [Install with shadcn](/docs/registry): configure the Uncut-Ui registry namespace and install React items.
+- Registry catalog: `/r/registry.json`; item payloads: `/r/<item-name>.json`.
+
+## Agent instructions
+When asked to use Uncut-Ui, read the agent guide and use the documented React components, tokens, and interaction rules. Every page and component must work from 320px phone widths through desktop without horizontal overflow; keep navigation and controls touch-accessible. Keep the interface white, gray, and black. Use the shared `--radius-*` tokens instead of one-off corner values. Prefer semantic HTML, keyboard access, visible focus, responsive layouts, and reduced motion. Support RTL with `dir="rtl"` and CSS logical properties. Constrain long-form content to about 900px (`max-w-5xl`). Add Open Graph and Twitter/X metadata and a project share image to every generated project. Use official, user-authorized APIs for external integrations.
+
+## Status
+This is an early library workspace. The shadcn-compatible registry is connected, with category manifests for components, blocks, templates, themes, and AI assets. The catalog is intentionally empty until items are created. For local installs, configure `"@uncut-ui": "http://127.0.0.1:3000/r/{name}.json"` in the consuming app's `components.json`, then run `bunx --bun shadcn add @uncut-ui/<item-name>`. The private component workbench is development-only and is not part of the public library navigation.
