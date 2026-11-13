@@ -1,0 +1,13 @@
+---
+description: Keep every Uncut-Ui page, component, block, template, and example usable on mobile.
+alwaysApply: true
+---
+
+# Mobile-responsive design
+
+- Treat mobile responsiveness as required for all new and changed UI.
+- Support narrow phone widths from 320px through tablet and desktop sizes without horizontal page overflow.
+- Reflow navigation, grids, typography, forms, previews, and imagery to fit; keep essential navigation and controls available on touch screens.
+- Use fluid sizing, responsive images, CSS Grid/Flexbox, and logical properties where possible.
+- Preserve readable text, visible focus, keyboard access, and comfortable touch targets at every breakpoint.
+- Check designs at representative phone, tablet, and desktop widths before considering a UI complete.
