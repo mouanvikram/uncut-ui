@@ -1,0 +1,12 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "uncut-ui",
+  "homepage": "https://uncut-ui.dev",
+  "include": [
+    "registry/components/registry.json",
+    "registry/blocks/registry.json",
+    "registry/templates/registry.json",
+    "registry/themes/registry.json",
+    "registry/ai/registry.json"
+  ]
+}
